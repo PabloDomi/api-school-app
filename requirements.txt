@@ -1,0 +1,10 @@
+flask
+flask-restx
+pathlib
+python-dotenv
+flask-jwt-extended
+flask-sqlalchemy
+flask-Migrate
+flask-bcrypt
+mysqlclient
+psycopg2-binary
