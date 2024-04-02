@@ -1,6 +1,6 @@
 # API para app school
 
-A brief description of your project.
+CRUD school management example API built with Python Flask-RestX and SQLAlchemy.
 
 ## Table of Contents
 
