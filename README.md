@@ -20,6 +20,8 @@ You only have to create a `.env` file in the `src` directory with the following 
 After that, you have to run these commands:
 
 ```bash
+python -m venv env --------------> CREAR EL VIRTUAL ENVIRONMENT
+
 flask db init  # Create instance and migrations folders
 flask db migrate -m "initial commit"  # Creates the `database.db` file in the `instance` folder
 flask db upgrade  # Creates the user tables and other tables based on the schema specified in the models in the db specified before
@@ -27,9 +29,8 @@ flask db upgrade  # Creates the user tables and other tables based on the schema
 
 ## Usage
 
-run these commands:
+Run these commands to initiate the API:
 ```bash
-    python -m venv env --------------> CREAR EL VIRTUAL ENVIRONMENT
     Source env/Scripts/Activate --------------> ACTIVAR EL VIRTUAL ENVIRONMENT
     pip install -r requirements.txt ----------> PARA INSTALAR DEPENDENCIAS DEL REQUIREMENTS.TXT
     flask run --------------------------------> PARA LANZAR LA API
