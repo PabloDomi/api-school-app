@@ -12,15 +12,18 @@ CRUD school management example API built with Python Flask-RestX and SQLAlchemy.
 
 You only have to create a `.env` file in the `src` directory with the following data:
 
-- `SQLALCHEMY_DATABASE_URI_DEV = ''`
-- `SQLALCHEMY_TRACK_MODIFICATIONS = ''`
-- `JWT_SECRET_KEY = ''`
-- `TEACHER_TOKEN = ''`
+- `SQLALCHEMY_DATABASE_URI_DEV = 'postgresql://user:password@localhost/mydatabase'`
+- `SQLALCHEMY_TRACK_MODIFICATIONS = '(usually FALSE)'`
+- `JWT_SECRET_KEY = 'SECRET-KEY-FOR-JWT-AUTH'`
+- `TEACHER_TOKEN = 'TOKEN-FOR-TEACHER-LOGIN-IN-APP'`
 
 After that, you have to run these commands:
 
 ```bash
 python -m venv env --------------> CREAR EL VIRTUAL ENVIRONMENT
+Source env/Scripts/Activate --------------> ACTIVAR EL VIRTUAL ENVIRONMENT (SI AUN NO LO HAS EJECUTADO)
+pip install -r requirements.txt ----------> PARA INSTALAR DEPENDENCIAS DEL REQUIREMENTS.TXT
+
 
 flask db init  # Create instance and migrations folders
 flask db migrate -m "initial commit"  # Creates the `database.db` file in the `instance` folder
@@ -31,8 +34,7 @@ flask db upgrade  # Creates the user tables and other tables based on the schema
 
 Run these commands to initiate the API:
 ```bash
-    Source env/Scripts/Activate --------------> ACTIVAR EL VIRTUAL ENVIRONMENT
-    pip install -r requirements.txt ----------> PARA INSTALAR DEPENDENCIAS DEL REQUIREMENTS.TXT
+    Source env/Scripts/Activate --------------> ACTIVAR EL VIRTUAL ENVIRONMENT (SI AUN NO LO HAS EJECUTADO)
     flask run --------------------------------> PARA LANZAR LA API
 ```
 
