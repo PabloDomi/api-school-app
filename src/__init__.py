@@ -34,8 +34,8 @@ app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY")
 # Config for mailing
 app.config['MAIL_SERVER']='sandbox.smtp.mailtrap.io'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = '4532e839f86467'
-app.config['MAIL_PASSWORD'] = '718ab2400a5d0b'
+app.config['MAIL_USERNAME'] = FLASK_MAIL_USER
+app.config['MAIL_PASSWORD'] = FLASK_MAIL_PW
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
